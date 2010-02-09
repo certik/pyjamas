@@ -27,6 +27,7 @@ class HTML(Label, InnerHTML):
         kwargs['WordWrap'] = wordWrap
         if Element is None:
             Element = DOM.createDiv()
+        kwargs["Element"] = Element
         self.setElement(Element)
         Label.__init__(self, **kwargs)
         self.sinkEvents(Event.ONCLICK | Event.MOUSEEVENTS)
